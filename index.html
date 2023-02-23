@@ -16,17 +16,14 @@
   <body>
     <header class="row m-0"></header>
     <main class="container text-center">
-      <h2 class="pt-5 pb-2">Search Movies and TV Series</h2>
-      <div class="inputSearch pb-3">
-        <input placeholder="Type a title" />
-        <button>Search</button>
+      <h2 class="pt-5 pb-2">Search Movies, TV Series or Actors</h2>
+      <div class="inputSearch mb-5">
+        <input class="btn btn-outline-dark" placeholder="Type a title" />
+        <button class="btn btn-success">Search</button>
       </div>
-      <div id="movies" class="row row-cols-1 row-cols-md-3 g-4">
+      <div id="movies" class="row row-cols-1 row-cols-md-3 g-4 mb-5">
         <div class="spinner-border" role="status" id="spinner">
           <span class="visually-hidden">Loading...</span>
-          <div></div>
-          <div></div>
-          <div></div>
         </div>
       </div>
     </main>

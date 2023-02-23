@@ -4,13 +4,18 @@ const container = document.querySelector("#movies");
 
 const spinner = document.getElementById("spinner");
 
+const userInput = document.querySelector("input");
+
+const button = document.querySelector("button");
+
+let params = "";
+
 const moviesList = async (title = "mandalorian") => {
   spinner.style.display = "grid";
   const { d } = await getMovies(title);
   spinner.style.display = "none";
 
   d.forEach((items) => {
-    console.log(items);
     const article = document.createElement("article");
     article.setAttribute("class", "col");
     article.innerHTML = `
@@ -29,4 +34,10 @@ const moviesList = async (title = "mandalorian") => {
   });
 };
 
-moviesList();
+const callParams = () => {
+  params = userInput.value;
+  moviesList(params);
+  userInput.value = "";
+};
+
+button.addEventListener("click", callParams);

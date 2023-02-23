@@ -20,6 +20,11 @@ header {
     background-position: center;
 }
 
+#spinner {
+    display: none;
+    margin: 3rem auto 0 auto;
+}
+
 footer {
     justify-content: center;
     align-items: center;
