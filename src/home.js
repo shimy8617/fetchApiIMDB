@@ -41,3 +41,9 @@ const callParams = () => {
 };
 
 button.addEventListener("click", callParams);
+
+window.addEventListener("hashchange", () => {
+  const id = location.hash.slice(1).toLocaleLowerCase().split("/")[1] || "/";
+  localStorage.setItem("charID", id);
+  window.location.replace("/details.html");
+});

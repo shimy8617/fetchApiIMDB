@@ -6,6 +6,7 @@ const options = {
   },
 };
 
+//GET LIST OF ITEMS
 const getMovies = async (title) => {
   const res = await fetch(
     `https://imdb8.p.rapidapi.com/auto-complete?q=${title}`,
@@ -15,4 +16,14 @@ const getMovies = async (title) => {
   return data;
 };
 
-export { getMovies };
+//GET DETAILS OF AN SPECIFIC ITEM
+const getDetails = async (id) => {
+  const res = await fetch(
+    `https://imdb8.p.rapidapi.com/title/get-overview-details?tconst=${id}&currentCountry=US`,
+    options
+  );
+  const data = await res.json();
+  return data;
+};
+
+export { getMovies, getDetails };
