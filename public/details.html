@@ -10,33 +10,28 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link href="./public/css/index.css" rel="stylesheet" type="text/css" />
+    <link href="./css/index.css" rel="stylesheet" type="text/css" />
     <title>Fetch API IMDB</title>
   </head>
   <body>
     <header class="row m-0"></header>
     <main class="container text-center">
-      <h2 class="pt-5 pb-2">Search Movies, TV Series or Actors</h2>
-      <div class="inputSearch mb-5">
-        <input class="btn btn-outline-dark" placeholder="Type a title" />
-        <button class="btn btn-success">Search</button>
-      </div>
-      <div id="movies" class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+      <div id="movies" class="row row-cols-1 m-5">
         <div class="spinner-border" role="status" id="spinner">
           <span class="visually-hidden">Loading...</span>
         </div>
       </div>
-      <button class="btn btn-primary mb-5" onclick="goForward()">
-        Go Back To Detail
+      <button class="btn btn-primary mb-5" onclick="goBack()">
+        Go Back To Main
       </button>
     </main>
     <footer class="row bg-dark-subtle text-light m-0 p-3" data-bs-theme="dark">
       Copyright 2023 - Made by Shimy
     </footer>
-    <script src="./src/home.js" type="module"></script>
+    <script src="./src/details.js" type="module"></script>
     <script>
-      function goForward() {
-        window.history.forward();
+      function goBack() {
+        window.history.back();
       }
     </script>
   </body>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link href="./css/index.css" rel="stylesheet" type="text/css" />
+    <title>Fetch API IMDB</title>
+  </head>
+  <body>
+    <header class="row m-0"></header>
+    <main class="container text-center">
+      <h2 class="pt-5 pb-2">Search Movies, TV Series or Actors</h2>
+      <div class="inputSearch mb-5">
+        <input
+          id="userInputSearch"
+          class="btn btn-outline-dark"
+          placeholder="Type a title"
+        />
+        <button id="searchBtn" class="btn btn-success">Search</button>
+      </div>
+      <div id="movies" class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+        <div class="spinner-border" role="status" id="spinner">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </main>
+    <footer class="row bg-dark-subtle text-light m-0 p-3" data-bs-theme="dark">
+      Copyright 2023 - Made by Shimy
+    </footer>
+    <script src="./src/home.js" type="module"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDGe_zxLc1VWDRw01JZ7v3Wo7bBND1PznM",
+        authDomain: "fetch-api-e8f71.firebaseapp.com",
+        projectId: "fetch-api-e8f71",
+        storageBucket: "fetch-api-e8f71.appspot.com",
+        messagingSenderId: "398337307343",
+        appId: "1:398337307343:web:fe8179443e7433ba45fdba",
+        measurementId: "G-B9YHWX0VSR",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+  </body>
+</html>

@@ -42,6 +42,16 @@ const callParams = () => {
 
 button.addEventListener("click", callParams);
 
+var input = document.getElementById("userInputSearch");
+
+input.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    console.log("apreto el enter");
+    document.getElementById("searchBtn").click();
+  }
+});
+
 window.addEventListener("hashchange", () => {
   const id = location.hash.slice(1).toLocaleLowerCase().split("/")[1] || "/";
   localStorage.setItem("charID", id);

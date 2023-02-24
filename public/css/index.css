@@ -16,7 +16,7 @@ header {
     display: flex;
     height: 11rem;
     width: 100vw;
-    background-image: url("/public/images/images.jpg");
+    background-image: url("../images/images.jpg");
     background-position: center;
 }
 
